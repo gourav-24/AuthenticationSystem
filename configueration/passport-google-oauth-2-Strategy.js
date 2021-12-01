@@ -6,7 +6,7 @@ const User = require('../models/user');
 passport.use(new googleStrategy({
     clientID :"320529293420-ske0dc7gdhbqpbebi9emcstje94ccmcb.apps.googleusercontent.com",
     clientSecret:"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",
-    callbackURL:"http://localhost:8000/users/auth/google/callback"
+    callbackURL:"https://authentication-system-v1.herokuapp.com/users/auth/google/callback"
 },function(accessToken,refreshToken,profile,done){
     // profile contains user info requested from google along with profile we have access and refresh token
     // check if user exist 
