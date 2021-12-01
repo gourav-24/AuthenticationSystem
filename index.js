@@ -10,9 +10,6 @@ const flash = require("connect-flash");
 const customMWare = require("./configueration/middleware");
 const passportGoogle = require("./configueration/passport-google-oauth-2-Strategy");
 
-// use ejs as your view engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
 
 // set static
 app.use(express.static("./assets"));
@@ -39,6 +36,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 // use flash
 app.use(flash());
+
+
+// use ejs as your view engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // use custom middleware
 //app.use(customMWare.setFlash);
