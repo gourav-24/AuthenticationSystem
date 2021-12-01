@@ -9,7 +9,17 @@ const passportLocal = require("./configueration/passportLocals");
 const flash = require("connect-flash");
 const customMWare = require("./configueration/middleware");
 const passportGoogle = require("./configueration/passport-google-oauth-2-Strategy");
+const sassMiddleWare = require("node-sass-middleware");
 
+// set sass middleware
+app.use(sassMiddleWare({
+  src : path.join(__dirname,"./assets","/scss"),
+  dest : path.join(__dirname,"./assets","/css"),
+  debug : true,
+  outputStyle: 'extended',
+  prefix : '/css'
+
+}));
 
 // set static
 app.use(express.static("./assets"));
