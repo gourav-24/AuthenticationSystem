@@ -42,10 +42,7 @@ app.use(flash());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// use custom middleware
-//app.use(customMWare.setFlash);
-//set authenticated user this method of passport is called everytime a req is made(in some renders too like(sign in))
-//app.use(passport.setAuthenticatedUser);
+
 // use routes index.js as middleware
 app.use("/", require("./routes/index"));
 
