@@ -1,4 +1,5 @@
-# AuthenticationSystem
+## AuthenticationSystem
+# Description
 This application can be used as a starter code for creating any new application.
 It Implement the following for a user with respective html pages:
 1) Sign up with email
@@ -14,7 +15,7 @@ Display notifications for
 
 Anyone can clone the code and start developing their application after the home page.
 
-Tech used.
+# Tech used.
 1) Nodejs
 2) Javascript
 3) Express as backend framework
